@@ -15,6 +15,7 @@ const kartTemplate = `
     </div>
 `;
 
+/*
 let randomNum = function () {
   let randomArray = [];
   for (let i = 0; i < 8; i++) {
@@ -26,7 +27,22 @@ let randomNum = function () {
 };
 
 const fotoNumaralari = randomNum();
-//[10, 20, 30, 20, 10, 40, 40, 30];
+[10, 20, 30, 20, 10, 40, 40, 30];
+
+console.log(fotoNumaralari);
+*/
+
+const fotoNumaralari = rastgeleNumaralar();
+function rastgeleNumaralar() {
+  let numaraDizisi = [];
+  while (numaraDizisi.length < 8) {
+    let sayi = Math.floor(Math.random() * 99) + 1;
+    if (numaraDizisi.indexOf(sayi) === -1) {
+      numaraDizisi.push(sayi, sayi);
+    }
+  }
+  return numaraDizisi;
+}
 
 console.log(fotoNumaralari);
 
